@@ -4,15 +4,98 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="@string/hello_from_mainactivity"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="128dp"
+        tools:layout="@layout/fragment_first" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_purple"
+        android:text="Add"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toTopOf="@id/button_add_with_back_stack"
+        app:layout_constraintEnd_toStartOf="@id/button_replace"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_container_view" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_add_with_back_stack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_purple"
+        android:text="Add with\nback stack"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/button_add"
+        app:layout_constraintStart_toStartOf="@id/button_add"
+        app:layout_constraintTop_toBottomOf="@id/button_add" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_replace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_purple"
+        android:text="Replace"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toTopOf="@id/button_replace_with_back_stack"
+        app:layout_constraintEnd_toStartOf="@id/button_remove_first_fragment"
+        app:layout_constraintStart_toEndOf="@id/button_add"
+        app:layout_constraintTop_toBottomOf="@id/fragment_container_view" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_replace_with_back_stack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_purple"
+        android:text="Add with\nback stack"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/button_replace"
+        app:layout_constraintStart_toStartOf="@id/button_replace"
+        app:layout_constraintTop_toBottomOf="@id/button_replace" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_remove_first_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_purple"
+        android:text="Remove\n FirstFragment"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toTopOf="@id/button_remove_second_fragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/button_replace"
+        app:layout_constraintTop_toBottomOf="@id/fragment_container_view" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_remove_second_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_purple"
+        android:text="Remove\n SecondFragment"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/button_remove_first_fragment"
+        app:layout_constraintStart_toStartOf="@id/button_remove_first_fragment"
+        app:layout_constraintTop_toBottomOf="@id/button_remove_first_fragment" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
