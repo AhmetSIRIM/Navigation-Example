@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_firstFragment_to_secondFragment"
             app:destination="@id/secondFragment" />
+        <action
+            android:id="@+id/action_firstFragment_to_nestedNavigation"
+            app:destination="@id/nestedNavigation" />
     </fragment>
 
     <fragment
@@ -39,10 +42,47 @@
         android:id="@+id/fourthFragment"
         android:name="com.whale.navigationexample.FourthFragment"
         android:label="fragment_fourth"
-        tools:layout="@layout/fragment_fourth">
+        tools:layout="@layout/fragment_fourth" >
         <action
-            android:id="@+id/action_fourthFragment_to_firstFragment2"
+            android:id="@+id/action_fourthFragment_to_firstFragment"
             app:destination="@id/firstFragment" />
     </fragment>
+
+    <navigation
+
+        android:id="@+id/nestedNavigation"
+        app:startDestination="@id/firstNestedFragment">
+
+        <fragment
+            android:id="@+id/firstNestedFragment"
+            android:name="com.whale.navigationexample.FirstNestedFragment"
+            android:label="fragment_first_nested"
+            tools:layout="@layout/fragment_first_nested">
+            <action
+                android:id="@+id/action_firstNestedFragment_to_secondNestedFragment"
+                app:destination="@id/secondNestedFragment" />
+        </fragment>
+
+        <fragment
+            android:id="@+id/secondNestedFragment"
+            android:name="com.whale.navigationexample.SecondNestedFragment"
+            android:label="fragment_second_nested"
+            tools:layout="@layout/fragment_second_nested">
+            <action
+                android:id="@+id/action_secondNestedFragment_to_thirdNestedFragment"
+                app:destination="@id/thirdNestedFragment" />
+        </fragment>
+
+        <fragment
+            android:id="@+id/thirdNestedFragment"
+            android:name="com.whale.navigationexample.ThirdNestedFragment"
+            android:label="fragment_third_nested"
+            tools:layout="@layout/fragment_third_nested">
+            <action
+                android:id="@+id/action_thirdNestedFragment_to_fourthFragment"
+                app:destination="@id/fourthFragment" />
+        </fragment>
+
+    </navigation>
 
 </navigation>

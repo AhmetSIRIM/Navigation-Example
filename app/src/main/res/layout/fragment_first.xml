@@ -18,8 +18,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center|bottom"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="175dp"
         android:text="@string/navigate_button_text"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/navigate_from_first_fragment_to_nested"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="50dp"
+        android:text="@string/navigate_to_nested_button_text"
         android:textSize="30sp" />
 
 </FrameLayout>

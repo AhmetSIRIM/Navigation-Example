@@ -27,6 +27,10 @@ class FirstFragment : Fragment() {
             )
         }
 
+        view.findViewById<Button>(R.id.navigate_from_first_fragment_to_nested).setOnClickListener {
+            findNavController().navigate(R.id.action_firstFragment_to_nestedNavigation)
+        }
+
     }
 
 }

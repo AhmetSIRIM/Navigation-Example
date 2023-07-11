@@ -8,22 +8,23 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.fragment.findNavController
 
-class FourthFragment : Fragment() {
+class SecondNestedFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_fourth, container, false)
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_second_nested, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        view.findViewById<Button>(R.id.navigate_from_fourth_fragment).setOnClickListener {
+        view.findViewById<Button>(R.id.navigate_from_second_nested_fragment).setOnClickListener {
             findNavController().navigate(
-                FourthFragmentDirections
-                    .actionFourthFragmentToFirstFragment()
+                SecondNestedFragmentDirections
+                    .actionSecondNestedFragmentToThirdNestedFragment()
             )
         }
 
