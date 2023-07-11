@@ -4,4 +4,6 @@
     <string name="hello_from_firstfragment">Hello from FirstFragment!</string>
     <string name="hello_from_secondfragment">Hello from SecondFragment!</string>
     <string name="hello_from_Thirdfragment">Hello from ThirdFragment!</string>
+    <string name="hello_from_Fourthfragment">Hello from FourthFragment!</string>
+    <string name="navigate_button_text">NAVIGATE</string>
 </resources>
