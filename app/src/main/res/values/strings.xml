@@ -9,4 +9,5 @@
     <string name="hello_from_thirdnestedfragment">Hello from Third Nested Fragment!</string>
     <string name="navigate_button_text">NAVIGATE</string>
     <string name="navigate_to_nested_button_text">NAVIGATE TO NESTED</string>
+    <string name="the_article_name">Navigation Component: Manuel Navigation Kıyası ve Kullanımı - Part II</string>
 </resources>

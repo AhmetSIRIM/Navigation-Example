@@ -26,6 +26,13 @@
         <action
             android:id="@+id/action_secondFragment_to_thirdFragment"
             app:destination="@id/thirdFragment" />
+
+        <argument
+            android:name="articleTitle"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+
     </fragment>
 
     <fragment
@@ -42,7 +49,7 @@
         android:id="@+id/fourthFragment"
         android:name="com.whale.navigationexample.FourthFragment"
         android:label="fragment_fourth"
-        tools:layout="@layout/fragment_fourth" >
+        tools:layout="@layout/fragment_fourth">
         <action
             android:id="@+id/action_fourthFragment_to_firstFragment"
             app:destination="@id/firstFragment" />
